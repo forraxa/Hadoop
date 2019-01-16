@@ -16,7 +16,7 @@
 
 
 ```
-`ficheros de configuración` 
+:cloud: ficheros de configuración 
 
 /opt/hadoop/etc/hadoop  
  - core-site.xml: Configuración del cluster  
