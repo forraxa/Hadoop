@@ -23,6 +23,6 @@ hadoop com.sun.tools.javac.Main Contarpalabras.java
 #crear fichero Contarpalabras.jar con todas las clases .class
 jar cf Contarpalabras.jar Cont*.class 
 
-#Usar la clase Contarpalabras que se encuentra dentro de Contarpalabras.jar sobre prueba.txt y guardar salida en hdfs 
+#Usar la clase Contarpalabras, que se encuentra dentro de Contarpalabras.jar, sobre prueba.txt y guardar salida en hdfs 
 hadoop jar Contarpalabras.jar Contarpalabras /ruta-hdfs/prueba.txt /ruta-salida-en-hdfs 
 ```
