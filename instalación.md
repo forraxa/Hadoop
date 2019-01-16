@@ -15,7 +15,8 @@
    Se crean las claves públicas y se comparten con los otros nodos dentro de autorized_keys  
 
 
-```ficheros de configuración 
+```
+`ficheros de configuración` 
 
 /opt/hadoop/etc/hadoop  
  - core-site.xml: Configuración del cluster  
