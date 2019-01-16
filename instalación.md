@@ -14,9 +14,9 @@
    ssh-keygen para crear clave pública y privada de cada nodo  
    Se crean las claves públicas y se comparten con los otros nodos dentro de autorized_keys  
 
-
+:cloud:
 ```
-:cloud: ficheros de configuración 
+ficheros de configuración 
 
 /opt/hadoop/etc/hadoop  
  - core-site.xml: Configuración del cluster  
