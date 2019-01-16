@@ -16,6 +16,7 @@
 
 
 :eyes:  
+___  
 ficheros de configuración 
 
 /opt/hadoop/etc/hadoop  
@@ -23,6 +24,9 @@ ficheros de configuración
  - hdfs-site.xml: Configuración de HDFS  
  - mapred-site.xml: Configuración de MapReduce  
  - yarn-site.xml: Configuración de trabajo de Yarn  
+ ___
  
- 
-:cloud:  Este es un ejemplo de "código en línea"
+:cloud:
+____
+Este es un ejemplo de "código en línea"
+____
