@@ -36,7 +36,6 @@ core-site.xml:
 ``` 
 hdfs-site.xml:  
 ```
-
 <configuration>
 	<property>
 		<name>dfs.replication</name>
