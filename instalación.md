@@ -25,8 +25,8 @@ Ficheros de configuración:
 ```
 
 - Configurar core.site. xml y hdfs-site.xml  
-```
 core-site.xml:
+```
 <configuration>
 	<property>
 		<name>fs.defaultFS</name>
@@ -34,8 +34,9 @@ core-site.xml:
 	</property>
 </configuration>
 ``` 
+hdfs-site.xml:  
 ```
-hdfs-site.xml:
+
 <configuration>
 	<property>
 		<name>dfs.replication</name>
