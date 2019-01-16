@@ -14,9 +14,8 @@
    ssh-keygen para crear clave pública y privada de cada nodo  
    Se crean las claves públicas y se comparten con los otros nodos dentro de autorized_keys  
 
-:cloud:
 ```
-ficheros de configuración 
+Ficheros de configuración: 
 
 /opt/hadoop/etc/hadoop  
  - core-site.xml: Configuración del cluster  
@@ -25,5 +24,32 @@ ficheros de configuración
  - yarn-site.xml: Configuración de trabajo de Yarn  
 ```
 
-Este es un ejemplo de "código en línea"
+- Configurar core.site. xml y hdfs-site.xml  
+```
+core-site.xml:
+<configuration>
+	<property>
+		<name>fs.defaultFS</name>
+		<value>hdfs://nodo1:9000</value>
+	</property>
+</configuration>
+``` 
+```
+hdfs-site.xml:
+<configuration>
+	<property>
+		<name>dfs.replication</name>
+		<value>1</value>
+	</property>
+	<property>
+		<name>dfs.namenode.name.dir</name>
+		<value>/datos/namenode</value>
+	</property>
+	<property>
+		<name>dfs.datanode.data.dir</name>
+		<value>/datos/datanode</value>
+	</property>
+</configuration>
+``` 
+
 
