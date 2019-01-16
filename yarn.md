@@ -3,6 +3,10 @@ Arrancar Yarn
 ```
 start-yarn.sh
 ```
+Parar Yarn
+```
+stop-yarn.sh
+```
 Gestionar cluster desde navegador nombre-maquina:puerto
 ```
 nodo1:8088
