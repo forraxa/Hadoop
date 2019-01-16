@@ -14,9 +14,8 @@
    ssh-keygen para crear clave pública y privada de cada nodo  
    Se crean las claves públicas y se comparten con los otros nodos dentro de autorized_keys  
 
-![](https://zen-marketing-documentation.s3.amazonaws.com/docs/en/markdown_image.png)
 
-> ficheros de configuración  
+"ficheros de configuración"  
 /opt/hadoop/etc/hadoop  
  - core-site.xml: Configuración del cluster  
  - hdfs-site.xml: Configuración de HDFS  
@@ -24,6 +23,4 @@
  - yarn-site.xml: Configuración de trabajo de Yarn  
  
  
-<retert
 
-!(https://zen-marketing-documentation.s3.amazonaws.com/docs/en/markdown_image.png)
