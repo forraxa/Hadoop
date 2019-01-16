@@ -8,7 +8,7 @@
     export JAVA_HOME=/usr/java/jdk1.8.0_191-amd64  
     export PATH=$PATH:$HADOOP_HOME/bin:$HADOOP_HOME/sbin 
     ```
-- Editar /etc/hosts y apuntar nuestra ip a nuestra maquina  
+- Editar /etc/hosts y apuntar a la ip de nuestra maquina  
    10.0.2.15 nodo1  
 - Configurar ssh para que los nodos se comuniquen  
    ssh-keygen para crear clave pública y privada de cada nodo  
