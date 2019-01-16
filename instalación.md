@@ -15,7 +15,8 @@
    Se crean las claves públicas y se comparten con los otros nodos dentro de autorized_keys  
 
 
-" ficheros de configuración "   
+:eyes:  
+ficheros de configuración 
 
 /opt/hadoop/etc/hadoop  
  - core-site.xml: Configuración del cluster  
@@ -24,4 +25,4 @@
  - yarn-site.xml: Configuración de trabajo de Yarn  
  
  
-Este es un ejemplo de "código en línea"
+:cloud:  Este es un ejemplo de "código en línea"
