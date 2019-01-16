@@ -52,7 +52,7 @@ hdfs-site.xml:
 	</property>
 </configuration>
 ``` 
-- Formatear hdfs para que se cree la estructra de directorios  
+- Formatear hdfs para que inicializar  
 ```
 hadoop namenode-format
 ```
