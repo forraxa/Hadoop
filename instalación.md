@@ -14,9 +14,9 @@
    ssh-keygen para crear clave pública y privada de cada nodo  
    Se crean las claves públicas y se comparten con los otros nodos dentro de autorized_keys  
 
-
-:eyes:  
 ___  
+:eyes:  
+
 ficheros de configuración 
 
 /opt/hadoop/etc/hadoop  
@@ -27,6 +27,6 @@ ficheros de configuración
  ___
  
 :cloud:
-____
+
 Este es un ejemplo de "código en línea"
 ____
