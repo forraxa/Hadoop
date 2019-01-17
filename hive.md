@@ -82,3 +82,36 @@ STRUCT | Colección de campos con nombre. Los campos pueden ser de distinto tipo
   when matched then update set name = sub.name, state = sub.new_state
   when not matched then insert values (sub.id, sub.name, sub.state);
   ```
+**Comandos SELECT**
+```
+SELECT [ALL / DISTINCT] select_expr, select_expr...
+FROM table_reference
+[WHERE where_condition]
+[GROUP BY col_list]
+[HAVING having_condition]
+[CLUSTER BY col_list | [DISTRIBUTE BY col_list][SORT BY col_list]]
+[LIMIT number]
+;
+```
+
+**Hive** también cuenta con:    
+- Mathematical Functions  
+- Collection Functionss  
+- Type Conversion Functions  
+- Date Functions  
+- Conditional Functions  
+- String Functions  
+- Misc Functions  
+
+**Ejemplos básicos**  
+```
+SELECT * FROM employee WHERE salary>30000;
+
+SELECT Id, Name, Dept FROM employee ORDER BY DEPT;
+
+SELECT Dept, count(*) FROM employee GROUP BY DEPT;
+
+SELECT c.ID, c.NAME, c.AGE, o.AMOUNT FROM CUSTOMERS c JOIN ORDERS o ON(c.ID = o.CUSTOMER_ID);
+
+SELECT c.ID, c.NAME, o.AMOUNT, o.DATE FROM CUSTOMERS c LEFT OUTER JOIN ORDERS o ON(c.ID = o.CUSTOMER_ID);
+```
