@@ -103,7 +103,7 @@ FROM table_reference
 - String Functions  
 - Misc Functions  
 
-**Ejemplos básicos**  
+**Ejemplos básicos SELECT**  
 ```
 SELECT * FROM employee WHERE salary>30000;
 
@@ -115,3 +115,31 @@ SELECT c.ID, c.NAME, c.AGE, o.AMOUNT FROM CUSTOMERS c JOIN ORDERS o ON(c.ID = o.
 
 SELECT c.ID, c.NAME, o.AMOUNT, o.DATE FROM CUSTOMERS c LEFT OUTER JOIN ORDERS o ON(c.ID = o.CUSTOMER_ID);
 ```
+Crear base de datos
+```
+create database ejemplo;
+```
+Conectarse o usar la base de datos  
+```
+use ejemplo;
+```
+Ver bases de datos
+```
+show databases;
+```
+Ver tablas en base de datos una vez conectados
+```
+show tables;
+```
+crear tabla
+```
+create table if nor exists t1
+  (
+  name string
+  );
+  ```
+  Describir inspeccionar tabla
+  ```
+  desc t1
+  ```
+  
