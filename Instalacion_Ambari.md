@@ -49,5 +49,25 @@ localhost:8080
 user:admin
 pass:admin
 ```
+
+#### Problema de instalación  
+Si presenta problemas en la conexión con los nodos revisar firewall e iptables: 
+
+```
+#Instar el servicio de iptables
+yum install iptables-services
+
+#Eliminar el servicio de firewalld:
+systemctl mask firewalld
+
+#Añadir el servicio de iptables
+systemctl enable iptables
+
+#Parar el servicio de firewalld
+systemctl stop firewalld
+
+#Iniciar el servicio de iptables
+“systemctl start iptables”
+```
       
       
