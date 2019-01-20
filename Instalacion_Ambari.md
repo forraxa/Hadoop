@@ -1,4 +1,4 @@
-#### Instalación de un cluster básico Hadoop con Ambari   
+## Instalación de un cluster básico Hadoop con Ambari   
 
 #### Crear red interna con los nodos requeridos (Centos7)  
   - Declarar nodos en /etc/hosts    
