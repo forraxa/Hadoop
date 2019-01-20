@@ -38,7 +38,7 @@ yum repolist
 #instalación del servidor
 yum install ambari-server
 
-#configuración del servidor, -s:desatendida
+#configuración del servidor, -s:desatendida aceptando valores por defecto
 ambari-server setup -s
 
 #iniciar servidor
