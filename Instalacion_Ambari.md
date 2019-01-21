@@ -50,6 +50,20 @@ user:admin
 pass:admin
 ```
 
+#### Configurar driver de mysql para HIVE
+```
+#Descargar driver
+
+#instalar driver
+rpm -ivh /home/hadoop/Descargas/jdk-8u201-linux-x64.rpm
+yum install /home/hadoop/Descargas/mysql-connector-java-8.0.13-1.el7.noarch.rpm
+
+#modificar permisos
+chmod 644 /usr/share/java/mysql-connector-java-8.0.13.jar
+
+#
+ambari-server setup --jdbc-db=mysql --jdbc-driver=/usr/share/java/mysql-connector-java-8.0.13.jar
+```
 #### Problema de instalación  
 Si presenta problemas en la conexión con los nodos revisar firewall e iptables: 
 
