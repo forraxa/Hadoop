@@ -56,7 +56,6 @@ pass:admin
 https://dev.mysql.com/downloads/connector/j/
 
 #instalar driver
-rpm -ivh /home/hadoop/Descargas/jdk-8u201-linux-x64.rpm
 yum install /home/hadoop/Descargas/mysql-connector-java-8.0.13-1.el7.noarch.rpm
 
 #modificar permisos
