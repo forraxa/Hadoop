@@ -56,13 +56,13 @@ pass:admin
 https://dev.mysql.com/downloads/connector/j/
 
 #instalar driver
-yum install /home/hadoop/Descargas/mysql-connector-java-8.0.13-1.el7.noarch.rpm
+yum install /home/hadoop/Descargas/mysql-connector-java-8.0.14-1.el7.noarch.rpm
 
 #modificar permisos
-chmod 644 /usr/share/java/mysql-connector-java-8.0.13.jar
+chmod 644 /usr/share/java/mysql-connector-java-8.0.14.jar
 
 #
-ambari-server setup --jdbc-db=mysql --jdbc-driver=/usr/share/java/mysql-connector-java-8.0.13.jar
+ambari-server setup --jdbc-db=mysql --jdbc-driver=/usr/share/java/mysql-connector-java-8.0.14.jar
 ```
 #### Problema de instalación  
 Si presenta problemas en la conexión con los nodos revisar firewall e iptables: 
