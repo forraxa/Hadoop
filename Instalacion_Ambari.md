@@ -1,5 +1,18 @@
 ## Instalación de un cluster básico Hadoop con Ambari   
 
+#### Instalar Java JDK
+```
+#descargar Java
+#instalar java
+rpm -ivh /home/hadoop/Descargas/jdk-8u201-linux-x64.rpm
+
+#seleccionar la nueva versión
+alternatives --config java
+
+#consultar versión instalada
+java -version
+```
+
 #### Crear red interna con los nodos requeridos (Centos7)  
   - Declarar nodos en /etc/hosts    
       192.168.0.101 nodo1  
