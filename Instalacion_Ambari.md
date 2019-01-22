@@ -101,4 +101,20 @@ service firewalld stop
 “systemctl start iptables”
 ```
       
-      
+ Problema con YARN DNS  
+ Este problema viene porque DNSmasq está ocupando el puerto 53.
+ ```
+ #ver quien está haciendo uso del puerto 53
+ lsof -i:53
+ 
+ #configurar para que DNSmasq deje de escuchar el puerto 53
+ sudo gedit /etc/dnsmasq.conf
+ port=0
+ 
+ #desactivar el puerto 53 añadiendo linea a dnsmasq.conf
+ DNSStubListener=no
+ 
+ #matar proceso dnsmasq
+ sudo killall dnsmasq
+ ```
+ 
