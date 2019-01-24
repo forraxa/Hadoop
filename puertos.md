@@ -9,3 +9,5 @@ http://192.168.176.148:50070 #HDFS
 http://192.168.176.148:9995 #Zeppelin  
 
 http://192.168.176.148:30800 #Data Analitics  
+
+http://192.168.176.148:9089 #Superset
