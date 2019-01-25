@@ -22,7 +22,10 @@ Dentro de /datos/namenode/current se almacenan los ficheros:
 
 **Lista de comandos HDFS**  
 
-dfs: Muy útil para interacturar con el sistema de ficheros  
+hdfs dfs: Para ficheros que apuntan a todos tipo de ficheros FS locales, HFTP FS, S3 FS y otros (incluido HDFS).  
+
+hdfs fs: Para ficheros que apuntan exclusivamente a ficheros HDFS. 
+
 
 Listar de comandos:
 ```
@@ -38,7 +41,10 @@ hdfs dfs -cat /ruta-hdfs/prueba.txt
 ```
 Otros comandos
 ```
-mkdir, cp, rm, get...
+hdfs dfs -mkdir /ruta-hdfs/data  #crear directorio
+hdfs dfs -cp /ruta-hdfs-local/prueba.txt /ruta-hdfs/data/  #copiar archivo a HDFS
+hdfs dfs rm /ruta-hdfs/prueba.txt  #eliminar archivo
+hadoop fs -get /ruta-hdfs/Samplefile.txt /home/  #copia de HDFS a local  
 ```
 
 ```
