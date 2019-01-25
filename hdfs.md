@@ -42,7 +42,7 @@ hdfs dfs -cat /ruta-hdfs/prueba.txt
 Otros comandos
 ```
 hdfs dfs -mkdir /ruta-hdfs/data  #crear directorio
-hdfs dfs -cp /ruta-hdfs-local/prueba.txt /ruta-hdfs/data/  #copiar archivo a HDFS
+hdfs dfs -cp /ruta-hdfs/prueba.txt /ruta-hdfs/data/  #copiar archivo dentro de HDFS
 hdfs dfs rm /ruta-hdfs/prueba.txt  #eliminar archivo
 hadoop fs -get /ruta-hdfs/Samplefile.txt /home/  #copia de HDFS a local  
 ```
