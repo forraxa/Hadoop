@@ -23,8 +23,10 @@ Otros comandos
 ```
 hdfs dfs -mkdir /ruta-hdfs/data  #crear directorio
 hdfs dfs -cp /ruta-hdfs/prueba.txt /ruta-hdfs/data/  #copiar archivo dentro de HDFS
-hdfs dfs rm /ruta-hdfs/prueba.txt  #eliminar archivo
-hadoop fs -get /ruta-hdfs/Samplefile.txt /home/  #copia de HDFS a local  
+hdfs dfs rm /ruta-hdfs/prueba.txt  #eliminar archivo o directorio vacío
+hdfs dfs rmr /ruta-hdfs/prueba.txt  #eliminar directorio recursivamente (incluso no vacíos)
+hadoop dfs -get /ruta-hdfs/Samplefile.txt /home/  #copia de HDFS a local  
+hadoop dfs -tail /ruta-hdfs/prueba.txt #ver las últimas lineas de un archivo
 ```
 
 ```
