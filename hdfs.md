@@ -1,24 +1,4 @@
 #### HDFS  
-Arrancar hdfs:  
-```
-/opt/hadoop/sbin/start-dfs.sh
-```
-Parar hdfs
-```
-stop-dfs.sh
-```
-Ver procesos java que están en uso
-```
-jps -l
-```
-Inspeccionar hdfs desde el navegador web (hadoop 3.x)
-```
-nodo1:9870
-```
-Dentro de /datos/namenode/current se almacenan los ficheros:
-  - edits_000xxx: Los cambios que se van produciendo
-  - edits_inprogress_xxx: Los cambios que se están produciendo en este momento
-  - fsimage_000xxx: Foto o copia del sistema de fichero
 
 **Lista de comandos HDFS**  
 
