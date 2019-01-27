@@ -15,3 +15,8 @@ http://192.168.2.129:9089 #Superset
 
 #### Usuarios y roles:  
 https://es.hortonworks.com/tutorial/learning-the-ropes-of-the-hortonworks-sandbox/
+
+#### Reset password admin
+```
+ambari-admin-password-reset
+```
