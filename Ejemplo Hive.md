@@ -73,7 +73,8 @@ SELECT
 from temp_drivers
 ```
 
-#### Ahora se crea la tabla timesheet declarando las variables
+#### Ahora se crea la tabla **externa** timesheet declarando las variables
+Las tablas externas no eliminan el fichero origen de datos cuando se eliminan.
 ```
 CREATE EXTERNAL TABLE timesheet (driverId INT, week INT, hours_logged INT , miles_logged INT)
 row format delimited 
@@ -83,7 +84,7 @@ STORED AS TEXTFILE
 tblproperties ("skip.header.line.count"="1");  #eliminar la cabecera 
 ```
 
-#### Cargar datos en timesheet desde documento en HDFS
+#### Cargar datos en timesheet desde documento en HDFS, LOAD DATA LOCAL INPATH... para ficheros en local.
 ```
 LOAD DATA INPATH '/tmp/data/timesheet.csv' OVERWRITE INTO TABLE timesheet;
 ```
