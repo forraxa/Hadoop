@@ -79,6 +79,7 @@ CREATE EXTERNAL TABLE timesheet (driverId INT, week INT, hours_logged INT , mile
 row format delimited 
 fields terminated by ',' 
 lines terminated by '\n' 
+STORED AS TEXTFILE
 tblproperties ("skip.header.line.count"="1");  #eliminar la cabecera 
 ```
 
