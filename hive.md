@@ -142,4 +142,14 @@ create table if nor exists t1
   ```
   desc t1
   ```
-  
+#### Crear una tabla en ORC desde TEXTFILE
+```
+CREATE TABLE test_details_txt( visit_id INT, store_id SMALLINT) STORED AS TEXTFILE;
+CREATE TABLE test_details_orc( visit_id INT, store_id SMALLINT) STORED AS ORC;
+
+-- Load into Text table
+LOAD DATA LOCAL INPATH '/home/user/test_details.txt' INTO TABLE test_details_txt;
+
+-- Copy to ORC table
+INSERT INTO TABLE test_details_orc SELECT * FROM test_details_txt;
+```
