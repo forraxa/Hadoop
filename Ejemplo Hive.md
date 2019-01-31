@@ -101,8 +101,19 @@ SELECT d.driverId, d.name, t.total_hours, t.total_miles from drivers d
 JOIN (SELECT driverId, sum(hours_logged)total_hours, sum(miles_logged)total_miles FROM timesheet GROUP BY driverId ) t
 ON (d.driverId = t.driverId)
 ```
+#### Consulta fuera del ambito del ejercicio.
+Realización de consultas de Joins anidados
+```
+CREATE TABLE webloganalytics as
+SELECT to_date(o.ts) logdate, o.url, o.ip, o.city, upper(o.state) state,
+o.country, p.category, CAST(datediff(from_unixtime(unix_timestamp()), from_unixtime(unix_timestamp(u.birth_dt, 'dd-MMM-yy'))) / 365 AS INT) age, u.gender_cd
+FROM omniture o
+INNER JOIN products p
+ON o.url = p.url
+LEFT OUTER JOIN users u
+ON o.swid = concat('{', u.swid , '}');
 
-
+```
 
 
 
