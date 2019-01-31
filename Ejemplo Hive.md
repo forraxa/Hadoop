@@ -95,7 +95,13 @@ LOAD DATA INPATH '/tmp/data/timesheet.csv' OVERWRITE INTO TABLE timesheet;
 Select driverID, sum(hours_logged), sum(miles_logged) FROM timesheet GROUP BY driverID;
 ```
 
-#### Por último se va 
+#### Por último se pretende obtener además del driverID, la suma de horas, la suma de millas, el nombre del conductor para lo que se necesita hacer un join con la tabla drivers.
+```
+SELECT d.driverId, d.name, t.total_hours, t.total_miles from drivers d
+JOIN (SELECT driverId, sum(hours_logged)total_hours, sum(miles_logged)total_miles FROM timesheet GROUP BY driverId ) t
+ON (d.driverId = t.driverId)
+```
+
 
 
 
