@@ -12,6 +12,8 @@ http://192.168.2.129:30800 #Data Analitics
 
 http://192.168.2.129:9089 #Superset
 
+http://192.168.2.129:8088/ui2 #YARN
+
 
 #### Usuarios y roles:  
 https://es.hortonworks.com/tutorial/learning-the-ropes-of-the-hortonworks-sandbox/
