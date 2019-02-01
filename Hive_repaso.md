@@ -334,3 +334,29 @@ space(INT n)	| string	| It will fetch and gives a string of n spaces.
 split(STRING str, STRING pat)	| array	| Splits str around pat (pat is a regular expression).
 Str_to_map(text[, delimiter1, delimiter2])	| map<String ,String>	| It will split text into key-value pairs using two delimiters.
 
+## 10 - ETL desde Json y XML
+
+**xml**  
+Se crea una tabla y se realiza una carga normal en una sóla columna, posteriormente se seleccionan las etiquetas xpath.  
+
+fichero xml:
+<emp><ename>ram</ename><esal>34000</esal></emp>  
+<emp><ename>cpu</ename><esal>25000</esal></emp>  
+```
+create table xmlsample (str string);                                                                                         load data local inpath '/home/hduser/test.xml' overwrite  into table xmlsample;
+select xpath(str,'emp/ename/text()'), xpath(str,'emp/esal/text()') from xmlsample_guru;
+```
+salida:  
+["ram"]   ["34000"]  
+["cpu"]   ["25000"]  
+
+**Json**  
+Se crea una tabla y se realiza una carga normal en una sóla columna, posteriormente se seleccionan los valores utilizando el método get_json_object()  
+```
+create table json_table(str string);
+load data inpath 'home/hduser/test.json' into table json_table;
+select get_json_object(str,'$.ecode') as ecode, get_json_object(str,'$.ename') as ename ,get_json_object(str,'$.sal') as salary from json_table;
+```
+
+
+
