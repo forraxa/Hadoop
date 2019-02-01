@@ -304,6 +304,7 @@ Supported formats in this :
 MONTH/MON/MM, YEAR/YYYY/YY.  
 
 **Mathematical Functions**  
+
 Function Name	| Return Type	| Description
 -|-|-
 round(DOUBLE X)	| DOUBLE	| It will fetch and returns the rounded BIGINT value of X
@@ -325,6 +326,7 @@ ISNOTNULL(X )	| Boolean	| It will fetch and gives true if X is not NULL and fals
 **String Functions**  
 
 Function Name	| Return Type	| Description
+-|-|-
 reverse(string X)	| string	| It will give the reversed string of X
 rpad(string str, int length, string pad)	| string	| It will fetch and gives str, which is right-padded with pad to a length of length(integer value)
 rtrim(string X)	| string	| It will fetch and returns the string resulting from trimming spaces from the end (right hand side) of X For example, rtrim(' results ') results in ' results'
