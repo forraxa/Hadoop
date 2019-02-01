@@ -42,8 +42,7 @@ Date/Time Types:
 Type	| Usage
 -|-
 Timestamp |	Supports traditional Unix timestamp with optional nanosecond precision
-Date	| It's in YYYY-MM-DD format.
-  | The range of values supported for the Date type is be 0000-01-01 to 9999-12-31, dependent onsupport by the primitive Java Date type
+Date	| It's in YYYY-MM-DD format. The range of values supported for the Date type is be 0000-01-01 to 9999-12-31, dependent onsupport by the primitive Java Date type
 
 Complex Types:
 
