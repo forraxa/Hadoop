@@ -221,3 +221,45 @@ X IS NOT NULL	| FALSE If expression X evaluates to NULL otherwise TRUE. | It tak
 X LIKE Y	| TRUE If string pattern X matches to Y otherwise FALSE. | Takes only Strings
 X RLIKE Y	| NULL if X or Y is NULL, TRUE if any substring of X matches the Java regular expression Y, otherwise FALSE. | Takes only Strings
 X REGEXP Y	| Same as RLIKE.	| Takes only Strings
+
+**Arithmetic Operators**  
+
+Built-in Operator |	Description	| Operand
+-|-|-
+X + Y	| It will return the output of adding X and Y value.	| It takes all number types
+X - Y	| It will return the output of subtracting Y from X value.	| It takes all number types
+X * Y	| It will return the output of multiplying X and Y values.	| It takes all number types
+X / Y	| It will return the output of dividing Y from X.	| It takes all number types
+X % Y	| It will return the remainder resulting from dividing X by Y.	| It takes all number types
+X & Y	| It will return the output of bitwise AND of X and Y.	| It takes all number types
+X | Y	| It will return the output of bitwise OR of X and Y.	| It takes all number types
+X ^ Y	| It will return the output of bitwise XOR of X and Y.	| It takes all number types
+~X	| It will return the output of bitwise NOT of X.	| It takes all number types
+
+**Logical Operators**  
+Operators |	Description	| Operands
+-|-|-
+X AND Y	| TRUE if both X and Y are TRUE, otherwise FALSE.	| Boolean types only
+X && Y	| Same as X AND Y but here we using && symbol	| Boolean types only
+X OR Y	| TRUE if either X or Y or both are TRUE, otherwise FALSE.	| Boolean types only
+X || Y	| Same as X OR Y but here we using || symbol	| Boolean types only
+NOT X	| TRUE if X is FALSE, otherwise FALSE.	| Boolean types only
+!X	| Same as NOT X but here we using! symbol	| Boolean types only
+
+
+**Operators on Complex**
+
+Operators	| Operands	| Description
+-|-|-
+A[n]	| A is an Array and n is an integer type	| It will return nth element in the array A. The first element has index of 0
+M[key]	| M is a Map<K, V> and key has type K	| It will return the values belongs to the key in the map
+
+**Complex type Constructors**  
+Operators	| Operands	| Description
+-|-|-
+array	| (val1, val2, ...)	| It will create an array with the given elements as mentioned like val1, val2
+Create_ union	| (tag, val1, val2, ...)	| It will create a union type with the values that is being mentioned to by the tag parameter
+map	| (key1, value1, key2, value2, ...)	| It will create a map with the given key/value pairs mentioned in operands
+Named_struct	| (name1, val1, name2, val2, ...)	| It will create a Struct with the given field names and values mentioned in operands
+STRUCT	| (val1, val2, val3, ...)	| Creates a Struct with the given field values. Struct field names will be col1, col2, .
+
