@@ -134,9 +134,35 @@ Create VIEW Sample_View AS SELECT * FROM employees WHERE salary>25000
 ```
 
 ## 6 - Queries: Order y, Group By, Distribute By, Cluster By  
+- Order by query  
+- Group by query  
+- Sort by  
+- Cluster By  
+- Distribute By  
 
+**Order By**  
+```
+SELECT * FROM drivers ORDER BY [ASC | DESC] time;
+```
+**Group By**  
+```
+SELECT Department, count(*) FROM employees GROUP BY Department;
+```
+**Sort By**  
+```
+SELECT * FROM drivers SORT BY [ASC | DESC] time;
+```
+**Cluster By**  
+```
+SELECT  Id, Name from employees CLUSTER BY Id;
+```
 
+**Distribute By**  
+```
+SELECT  Id, Name from employees_guru DISTRIBUTE BY Id;
+```
 
+## 7 - Join and Subqueries 
 
 ### Joins (join, left outer join, right outer join, full outer join)
 Unión de dos o más tablas  
@@ -162,3 +188,36 @@ Muestra todas las filas de ambas tablas.
 SELECT c.Id, c.Name, o.Amount FROM sample_joins c FULL OUTER JOIN sample_joins1 o ON(c.Id=o.Id)
 ```
 
+### Subquery
+Una consulta dentro de otra consulta.  
+La consulta principal dependerá de los valores devueltos por las subconsultas.  
+
+- Subconsultas con FROM  
+- Subconsultas con WHERE  
+
+```
+SELECT col1 FROM (SELECT a+b AS col1 FROM t1) t2
+```
+
+## 8 - Operadores (Relacional, aritmético, lógico, complejo...)  
+- Relational Operators  
+- Arithmetic Operators  
+- Logical Operators  
+- Operators on Complex types  
+- Complex type Constructors  
+
+**Relational Operators**  
+
+Built-in Operator	| Description	| Operand
+-|-|-
+X = Y	| TRUE if expression X is equivalent to expression Y Otherwise FALSE. | It takes all primitive types
+X != Y	| TRUE if expression X is not equivalent to expression Y Otherwise FALSE. | It takes all primitive types
+X < Y	| TRUE if expression X is less than expression Y Otherwise FALSE. | It takes all primitive types
+X <= Y	| TRUE if expression X is less than or equal to expression Y Otherwise FALSE. | It takes all primitive types
+X>Y	| TRUE if expression X is greater than expression Y Otherwise FALSE. | It takes all primitive types
+X>= Y	| TRUE if expression X is greater than or equal to expression Y Otherwise FALSE. | It takes all primitive types
+X IS NULL	| TRUE if expression X evaluates to NULL otherwise FALSE.	| It takes all types
+X IS NOT NULL	| FALSE If expression X evaluates to NULL otherwise TRUE. | It takes all types
+X LIKE Y	| TRUE If string pattern X matches to Y otherwise FALSE. | Takes only Strings
+X RLIKE Y	| NULL if X or Y is NULL, TRUE if any substring of X matches the Java regular expression Y, otherwise FALSE. | Takes only Strings
+X REGEXP Y	| Same as RLIKE.	| Takes only Strings
