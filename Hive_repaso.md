@@ -265,3 +265,70 @@ map	| (key1, value1, key2, value2, ...)	| It will create a map with the given ke
 Named_struct	| (name1, val1, name2, val2, ...)	| It will create a Struct with the given field names and values mentioned in operands
 STRUCT	| (val1, val2, val3, ...)	| Creates a Struct with the given field values. Struct field names will be col1, col2, .
 
+## 9 - Funciones incorparadas y definidas por el usuario (UDF)  
+
+- Collection Functions  
+- Date Functions  
+- Mathematical Functions  
+- Conditional Functions  
+- String Functions  
+- Misc. Functions  
+
+**Collection Functions**  
+
+Return Type	| Function Name	| Description
+-|-|-
+INT	| size(Map<K.V>)	| It will fetch and give the components number in the map type
+INT	| size(Array<T>)	| It will fetch and give the elements number in the array type
+Array<K>	| Map_keys(Map<K.V>)	| It will fetch and gives an array containing the keys of the input map. Here array is in unordered
+Array<V>	| Map_values(Map<K.V>)	| It will fetch and gives an array containing the values of the input map. Here array is in unordered
+Array<t>	| Sort_array(Array<T>)	| sorts the input array in ascending order of array and elements and returns it
+
+**Date Functions**  
+
+Function Name	| Return Type	| Description
+-|-|-
+Unix_Timestamp()	| BigInt	| We will get current Unix timestamp in seconds
+To_date(string timestamp)	| string	| It will fetch and give the date part of a timestamp string:
+year(string date)	| INT	| It will fetch and give the year part of a date or a timestamp string
+quarter(date/timestamp/string)	| INT	| It will fetch and give the quarter of the year for a date, timestamp, or string in the range 1 to 4
+month(string date)	| INT	| It will give the month part of a date or a timestamp string
+hour(string date)	| INT	| It will fetch and gives the hour of the timestamp
+minute(string date)	| INT	| It will fetch and gives the minute of the timestamp
+Date_sub(string starting date, int days)	| string	| It will fetch and gives Subtraction of number of days to starting date
+Current_date	| date	| It will fetch and gives the current date at the start of query evaluation
+LAST _day(string date)	| string	| It will fetch and gives the last day of the month which the date belongs to
+trunc(string date, string format)	| string	| It will fetch and gives date truncated to the unit specified by the format. 
+
+Supported formats in this :  
+MONTH/MON/MM, YEAR/YYYY/YY.  
+
+**Mathematical Functions**  
+Function Name	| Return Type	| Description
+-|-|-
+round(DOUBLE X)	| DOUBLE	| It will fetch and returns the rounded BIGINT value of X
+round(DOUBLE X, INT d)	| DOUBLE	| It will fetch and returns X rounded to d decimal places
+bround(DOUBLE X)	| DOUBLE	| It will fetch and returns the rounded BIGINT value of X using HALF_EVEN rounding mode
+floor(DOUBLE X)	| BIGINT	| It will fetch and returns the maximum BIGINT value that is equal to or less than X value
+ceil(DOUBLE a), ceiling(DOUBLE a)	| BIGINT	| It will fetch and returns the minimum BIGINT value that is equal to or greater than X value
+rand(), rand(INT seed)	| DOUBLE	| It will fetch and returns a random number that is distributed uniformly from 0 to 1
+
+**Conditional Functions**  
+
+Function Name	| Return Type	| Description
+-|-|-
+if(Boolean testCondition, T valueTrue, T valueFalseOrNull)	| T	| It will fetch and gives value True when Test Condition is of true, gives value False Or Null otherwise.
+ISNULL( X)	| Boolean	| It will fetch and gives true if X is NULL and false otherwise.
+ISNOTNULL(X )	| Boolean	| It will fetch and gives true if X is not NULL and false otherwise.
+
+
+**String Functions**  
+
+Function Name	| Return Type	| Description
+reverse(string X)	| string	| It will give the reversed string of X
+rpad(string str, int length, string pad)	| string	| It will fetch and gives str, which is right-padded with pad to a length of length(integer value)
+rtrim(string X)	| string	| It will fetch and returns the string resulting from trimming spaces from the end (right hand side) of X For example, rtrim(' results ') results in ' results'
+space(INT n)	| string	| It will fetch and gives a string of n spaces.
+split(STRING str, STRING pat)	| array	| Splits str around pat (pat is a regular expression).
+Str_to_map(text[, delimiter1, delimiter2])	| map<String ,String>	| It will split text into key-value pairs using two delimiters.
+
