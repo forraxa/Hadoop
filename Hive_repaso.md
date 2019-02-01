@@ -236,7 +236,8 @@ X | Y	| It will return the output of bitwise OR of X and Y.	| It takes all numbe
 X ^ Y	| It will return the output of bitwise XOR of X and Y.	| It takes all number types
 ~X	| It will return the output of bitwise NOT of X.	| It takes all number types
 
-**Logical Operators**  
+**Logical Operators** 
+
 Operators |	Description	| Operands
 -|-|-
 X AND Y	| TRUE if both X and Y are TRUE, otherwise FALSE.	| Boolean types only
@@ -255,6 +256,7 @@ A[n]	| A is an Array and n is an integer type	| It will return nth element in th
 M[key]	| M is a Map<K, V> and key has type K	| It will return the values belongs to the key in the map
 
 **Complex type Constructors**  
+
 Operators	| Operands	| Description
 -|-|-
 array	| (val1, val2, ...)	| It will create an array with the given elements as mentioned like val1, val2
