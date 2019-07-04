@@ -34,6 +34,7 @@ hdfs dfsadmin #Listar comandos administrativos
 hdfs dfsadmin - report #obtener un reporte
 hdfs fsck / #realizar un check
 hdfs dfsadmin -printTopology #identificar número de nodos y en que rack está
+hdfs dfs -du -h / #lista los directorios y el tamaño ocupado
 ```
 Snapshot
 ```
